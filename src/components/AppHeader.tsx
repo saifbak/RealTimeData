@@ -1,12 +1,12 @@
 import React from 'react'
-import { View, Text, StyleSheet, Dimensions } from 'react-native';
+import { View, Text, StyleSheet, Dimensions, Image } from 'react-native';
 
 
 const { width, height } = Dimensions.get('window')
 const AppHeader: React.FC = () => {
     return (
         <View style={styles.container}>
-            <View />
+            <Image source={require('../assets/more.png')} style={{ width: 20, height: 20 }} />
             <Text style={styles.heading}>Home</Text>
             <View />
         </View>
@@ -22,11 +22,9 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: "space-between",
         paddingHorizontal: 15,
-        // paddingVertical: 10,
     },
     heading: {
         fontSize: height * 0.023,
-        // padding: height * 0.016,
         fontWeight: "600",
         color: 'white'
     },
